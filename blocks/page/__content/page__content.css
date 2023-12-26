@@ -2,14 +2,14 @@
   width: 100%;
   max-width: 880px;
   margin: 0 19px;
-  /* max-width: calc(880px + 19px*2);
-  padding-left: 19px;
-  padding-right: 19px; */
 }
 
-@media screen and (max-width: 1140px) {
+@media screen and (max-width: calc(880px + 19px*2)) {
+  /* максимальная ширина + 2 боковых отступа padding - меняет боковые margin на padding */
   .page__content {
-    /* margin-top: 48px; */
+    margin: 0;
+    padding-left: 19px;
+    padding-right: 19px;
   }
 }
 
