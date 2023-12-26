@@ -1,8 +1,7 @@
 .profile__info {
-  margin-right: auto;
-  margin-left: 30px;
+  margin: 2px auto 0 30px;
   display: grid;
   grid-template-areas:
   "author button"
-  "descr descr";
+  "descr .";
 }
