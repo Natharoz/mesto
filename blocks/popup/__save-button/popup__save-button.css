@@ -1,0 +1,28 @@
+.popup__save-button {
+  color: #FFF;
+  font-family: 'Inter', Arial, sans-serif;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  background-color: #000;
+  color: #fff;
+  width: 100%;
+  min-height: 50px;
+  margin: 0;
+  padding: 0;
+  border: none;
+  border-radius: 2px;
+  transition: opacity .3s ease;
+  cursor: pointer;
+}
+
+.popup__save-button:hover {
+  opacity: .8;
+}
+
+@media screen and (max-width: 550px) {
+  .popup__save-button {
+    min-height: 46px;
+  }
+}

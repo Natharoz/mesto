@@ -11,6 +11,8 @@
   padding: 0;
   align-self: center;
   margin-top: 5px;
+  transition: opacity .3s ease;
+  cursor: pointer;
 }
 
 @media screen and (max-width: 450px) {
@@ -20,4 +22,8 @@
     align-self: center;
     margin-top: 0;
   }
+}
+
+.profile__edit-button:hover {
+  opacity: 0.6;
 }

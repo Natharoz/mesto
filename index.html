@@ -18,16 +18,16 @@
         <div class="profile__info">
           <h1 class="profile__author">Жак-Ив Кусто</h1>
           <p class="profile__description">Исследователь океана</p>
-          <button class="profile__edit-button"></button>
+          <button class="profile__edit-button" aria-label="редактировать профиль"></button>
         </div>
-        <button class="profile__add-button"></button>
+        <button class="profile__add-button" aria-label="добавить фотографии"></button>
       </section>
       <section class="elements">
         <div class="element">
           <img src="./images/karachaevsk.png" alt="карачаевск" class="element__place">
           <div class="element__name">
             <h2 class="element__title">Карачаевск</h2>
-            <button class="element__like">
+            <button aria-label="нравится" class="element__like">
             </button>
           </div>
         </div>
@@ -35,35 +35,35 @@
           <img src="./images/elbrus.png" alt="эльбрус" class="element__place">
           <div class="element__name">
             <h2 class="element__title">Гора Эльбрус</h2>
-            <button class="element__like"></button>
+            <button aria-label="нравится" class="element__like"></button>
           </div>
         </div>
         <div class="element">
           <img src="./images/dombay.png" alt="домбай" class="element__place">
           <div class="element__name">
             <h2 class="element__title">Домбай</h2>
-            <button class="element__like"></button>
+            <button aria-label="нравится" class="element__like"></button>
           </div>
         </div>
         <div class="element">
           <img src="./images/elbrus.png" alt="эльбрус" class="element__place">
           <div class="element__name">
             <h2 class="element__title">Гора Эльбрус</h2>
-            <button class="element__like"></button>
+            <button aria-label="нравится" class="element__like"></button>
           </div>
         </div>
         <div class="element">
           <img src="./images/dombay.png" alt="домбай" class="element__place">
           <div class="element__name">
             <h2 class="element__title">Домбай</h2>
-            <button class="element__like"></button>
+            <button aria-label="нравится" class="element__like"></button>
           </div>
         </div>
         <div class="element">
           <img src="./images/karachaevsk.png" alt="карачаево-Черкесия" class="element__place">
           <div class="element__name">
             <h2 class="element__title">Карачаево-Черкесия</h2>
-            <button class="element__like"></button>
+            <button aria-label="нравится" class="element__like"></button>
           </div>
         </div>
       </section>
@@ -72,6 +72,17 @@
     <footer class="footer page__content">
       <p class="footer__copyright" lang="en">© 2020 Mesto Russia</p>
     </footer>
+  </div>
+  <div class="popup">
+    <form class="popup__container">
+      <h2 class="popup__name-form">Редактировать профиль</р2>
+      <fieldset class="popup__fieldset">
+        <input class="popup__field" type="text" name="fullname" value="Жак-Ив Кусто" placeholder="Введите имя" minlength="2" maxlength="40" required>
+        <input class="popup__field" type="text" name="occupation" value="Исследователь океана" placeholder="Занятость" minlength="2" maxlength="200" required>
+      </fieldset>
+      <button class="popup__save-button" aria-label="сохранить форму">Сохранить</button>
+      <button class="popup__close-button" aria-label="закрыть форму"></button>
+    </form>
   </div>
 </body>
 </html>

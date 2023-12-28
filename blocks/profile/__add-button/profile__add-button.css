@@ -7,6 +7,8 @@
   min-width: 150px;
   border: none;
   padding: 0;
+  transition: opacity .3s ease;
+  cursor: pointer;
 }
 
 @media screen and (max-width: 700px) {
@@ -17,8 +19,11 @@
     border-radius: 2px;
     border: 2px solid #FFF;
     max-height: 50px;
-    min-width: 150px;
     width: 100%;
     padding: 17px 0;
   }
+}
+
+.profile__add-button:hover {
+  opacity: 0.6;
 }
