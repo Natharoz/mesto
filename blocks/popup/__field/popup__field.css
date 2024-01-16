@@ -4,10 +4,9 @@
   font-style: normal;
   font-weight: 400;
   line-height: normal;
-  padding: 0;
-  padding-bottom: 9px;
+  padding: 2px 4px 9px;
   width: 100%;
   border: none;
   border-bottom: 1px solid rgba(0, 0, 0, .2);
-  outline: none;
+  /* outline: none; */
 }
