@@ -5,15 +5,15 @@ let profileCloseButton = document.querySelector('.popup__close-button');
 
 // Информация об авторе
 let author = {
-  name: 'Жак-Ив Кусто',
+  // name: 'Жак-Ив Кусто',
   description: 'Исследователь океана'
 };
 
 let authorName = document.querySelector('.profile__author');
-authorName.textContent = author.name;
+// authorName.textContent = author.name;
 
 let authorNameInput = document.querySelector('.popup__field[name="fullname"]');
-authorNameInput.value = author.name;
+// authorNameInput.value = author.name;
 
 let authorDescription = document.querySelector('.profile__description');
 authorDescription.textContent = author.description;

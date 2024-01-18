@@ -1,7 +1,7 @@
 .profile__author {
   max-width: 100%;
   grid-area: author;
-  margin: 0 25px 0 0;
+  margin: 0 20px 0 0;
   font-family: 'Inter', Arial, sans-serif;
   font-size: 42px;
   font-style: normal;
@@ -12,14 +12,9 @@
   overflow: hidden;
 }
 
-@media screen and (max-width: 700px) {
-  .profile__author {
-  }
-}
-
 @media screen and (max-width: 450px) {
   .profile__author {
-    margin-right: 10px;
+    margin-right: 13px;
     font-size: 27px;
     line-height: normal;
   }

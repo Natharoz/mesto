@@ -1,5 +1,4 @@
 .profile__info {
-  /* max-width: 400px; */
   margin: 0 auto 0 30px;
   display: grid;
   grid-template-areas:
@@ -18,6 +17,5 @@
 @media screen and (max-width: 450px) {
   .profile__info {
     margin: 26px 0 33px;
-    padding-left: 12px;
   }
 }
