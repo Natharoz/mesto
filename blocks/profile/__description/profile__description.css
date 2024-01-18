@@ -1,4 +1,5 @@
 .profile__description {
+  max-width: 100%;
   grid-area: descr;
   margin: 6px 25px 0 0;
   font-family: 'Inter', Arial, sans-serif;

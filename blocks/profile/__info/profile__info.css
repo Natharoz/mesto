@@ -1,5 +1,6 @@
 .profile__info {
-  margin: 2px auto 0 30px;
+  /* max-width: 400px; */
+  margin: 0 auto 0 30px;
   display: grid;
   grid-template-areas:
   "author button"
@@ -10,13 +11,13 @@
   .profile__info {
     margin: 26px 0 33px;
     text-align: center;
-    transform: translate(25px);
+    padding-left: 24px;
   }
 }
 
 @media screen and (max-width: 450px) {
   .profile__info {
     margin: 26px 0 33px;
-    transform: translate(12px);
+    padding-left: 12px;
   }
 }
