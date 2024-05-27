@@ -62,3 +62,42 @@ elements.onclick = function(event){
     event.target.classList.toggle('element__like_active')
   }
 };
+
+// ---------------
+// const initialCards = [
+//   {
+//     name: 'Архыз',
+//     link: 'https://pictures.s3.yandex.net/frontend-developer/cards-compressed/arkhyz.jpg'
+//   },
+//   {
+//     name: 'Челябинская область',
+//     link: 'https://pictures.s3.yandex.net/frontend-developer/cards-compressed/chelyabinsk-oblast.jpg'
+//   },
+//   {
+//     name: 'Иваново',
+//     link: 'https://pictures.s3.yandex.net/frontend-developer/cards-compressed/ivanovo.jpg'
+//   },
+//   {
+//     name: 'Камчатка',
+//     link: 'https://pictures.s3.yandex.net/frontend-developer/cards-compressed/kamchatka.jpg'
+//   },
+//   {
+//     name: 'Холмогорский район',
+//     link: 'https://pictures.s3.yandex.net/frontend-developer/cards-compressed/kholmogorsky-rayon.jpg'
+//   },
+//   {
+//     name: 'Байкал',
+//     link: 'https://pictures.s3.yandex.net/frontend-developer/cards-compressed/baikal.jpg'
+//   }
+// ];
+
+// initialCards.forEach(card => {
+// const cardHtml = `<div class="element">
+// <img src="${card.link}">
+// <div class="element__name">
+//   <h2 class="element__title">${card.name}</h2>
+//   <button type="button" aria-label="нравится" class="element__like"></button>
+// </div>
+// </div>`;
+// elements.insertAdjacentHTML('beforeend', cardHtml);
+// });
