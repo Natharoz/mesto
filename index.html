@@ -23,50 +23,20 @@
         </div>
         <button class="profile__add-button" aria-label="добавить фотографии"></button>
       </section>
-      <section class="elements">
-        <div class="element">
-          <img src="./images/karachaevsk.png" alt="карачаевск" class="element__place">
-          <div class="element__name">
-            <h2 class="element__title">Карачаевск</h2>
-            <button type="button" aria-label="нравится" class="element__like"></button>
-          </div>
-        </div>
-        <div class="element">
-          <img src="./images/elbrus.png" alt="эльбрус" class="element__place">
-          <div class="element__name">
-            <h2 class="element__title">Гора Эльбрус</h2>
-            <button type="button" aria-label="нравится" class="element__like"></button>
-          </div>
-        </div>
-        <div class="element">
-          <img src="./images/dombay.png" alt="домбай" class="element__place">
-          <div class="element__name">
-            <h2 class="element__title">Домбай</h2>
-            <button type="button" aria-label="нравится" class="element__like"></button>
-          </div>
-        </div>
-        <div class="element">
-          <img src="./images/elbrus.png" alt="эльбрус" class="element__place">
-          <div class="element__name">
-            <h2 class="element__title">Гора Эльбрус</h2>
-            <button type="button" aria-label="нравится" class="element__like"></button>
-          </div>
-        </div>
-        <div class="element">
-          <img src="./images/dombay.png" alt="домбай" class="element__place">
-          <div class="element__name">
-            <h2 class="element__title">Домбай</h2>
-            <button type="button" aria-label="нравится" class="element__like"></button>
-          </div>
-        </div>
-        <div class="element">
-          <img src="./images/karachaevsk.png" alt="карачаево-Черкесия" class="element__place">
-          <div class="element__name">
-            <h2 class="element__title">Карачаево-Черкесия</h2>
-            <button type="button" aria-label="нравится" class="element__like"></button>
-          </div>
-        </div>
-      </section>
+
+        <section class="elements">
+          <template id="cardTemplate">
+            <div class="element">
+              <img class="element__place">
+              <div class="element__name">
+                <h2 class="element__title"></h2>
+                <button type="button" aria-label="нравится" class="element__like"></button>
+              </div>
+            </div>
+          </template>
+        </section>
+
+
     </main>
 
     <footer class="footer page__content">
