@@ -5,15 +5,15 @@ let profileCloseButton = document.querySelector('.popup__close-button');
 
 // Информация об авторе
 let author = {
-  // name: 'Жак-Ив Кусто',
+  name: 'Жак-Ив Кусто',
   description: 'Исследователь океана'
 };
 
 let authorName = document.querySelector('.profile__author');
-// authorName.textContent = author.name;
+authorName.textContent = author.name;
 
 let authorNameInput = document.querySelector('.popup__field[name="fullname"]');
-// authorNameInput.value = author.name;
+authorNameInput.value = author.name;
 
 let authorDescription = document.querySelector('.profile__description');
 authorDescription.textContent = author.description;
@@ -63,7 +63,6 @@ elements.onclick = function(event){
   }
 };
 
-// ---------------
 const initialCards = [
   {
     name: 'Архыз',
@@ -112,12 +111,22 @@ const initialCards = [
   }
 ];
 
-initialCards.forEach(card => {
+const createCard = (card) => {
   const newCard = document.querySelector('#cardTemplate').content.cloneNode(true);
   const cardHeading = newCard.querySelector('.element__title');
   cardHeading.textContent = card.name;
   const cardImage = newCard.querySelector('.element__place');
   cardImage.setAttribute('alt', card.alt);
   cardImage.setAttribute('src', card.link);
+  const deleteButton = newCard.querySelector('.element__delete');
+  deleteButton.addEventListener('click', handleDeleteButtonClick);
   elements.append(newCard);
-});
+}
+
+initialCards.forEach(createCard);
+
+function handleDeleteButtonClick(event) {
+  const button = event.target
+  const card = button.closest('.element');
+  card.remove();
+}
