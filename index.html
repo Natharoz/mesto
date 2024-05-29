@@ -26,14 +26,14 @@
 
         <section class="elements">
           <template id="cardTemplate">
-            <div class="element">
+            <article class="element">
               <img class="element__place">
               <div class="element__name">
                 <h2 class="element__title"></h2>
                 <button type="button" aria-label="Нравится" class="element__like"></button>
                 <button type="button" aria-label="Удалить" class="element__delete"></button>
               </div>
-            </div>
+            </article>
           </template>
         </section>
 
@@ -44,7 +44,7 @@
       <p class="footer__copyright" lang="en">© 2023 Mesto Russia</p>
     </footer>
   </div>
-  <div class="popup">
+  <div class="popup popup_type_edit">
     <form class="popup__container">
       <h2 class="popup__name-form">Редактировать профиль</h2>
       <fieldset class="popup__fieldset">
@@ -52,6 +52,18 @@
         <input class="popup__field" type="text" name="occupation" placeholder="Занятость" minlength="2" maxlength="200" required>
       </fieldset>
       <button class="popup__save-button" type="submit" aria-label="сохранить форму">Сохранить</button>
+      <button class="popup__close-button" type="button" aria-label="закрыть форму"></button>
+    </form>
+  </div>
+
+  <div class="popup popup_type_add-card">
+    <form class="popup__container">
+      <h2 class="popup__name-form">Новое место</h2>
+      <fieldset class="popup__fieldset">
+        <input class="popup__field" type="text" name="fullname" placeholder="Название" minlength="2" maxlength="40" required>
+        <input class="popup__field" type="text" name="occupation" placeholder="Ссылка на картинку" minlength="2" maxlength="200" required>
+      </fieldset>
+      <button class="popup__save-button" type="submit" aria-label="создать место">Создать</button>
       <button class="popup__close-button" type="button" aria-label="закрыть форму"></button>
     </form>
   </div>

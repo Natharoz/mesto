@@ -1,7 +1,8 @@
 // Попап
-let editPopup = document.querySelector('.popup');
+let editPopup = document.querySelector('.popup_type_edit');
+let addCardPopup = document.querySelector('.popup_type_add-card');
 let profileEditButton = document.querySelector('.profile__edit-button');
-let profileCloseButton = document.querySelector('.popup__close-button');
+let profileAddButton = document.querySelector('.profile__add-button');
 
 // Информация об авторе
 let author = {
@@ -21,23 +22,34 @@ authorDescription.textContent = author.description;
 let authorDescriptionInput = document.querySelector('.popup__field[name="occupation"]');
 authorDescriptionInput.value = author.description;
 
-// Открытие попапа
+// Открытие попапа профиля
 profileEditButton.addEventListener('click', function(){
   openPopup(editPopup);
   authorNameInput.value = authorName.textContent;
   authorDescriptionInput.value = authorDescription.textContent;
 });
 
-function openPopup(popup) {
-  popup.classList.add('popup_opened');
-};
-
-// Закрытие попапа
-profileCloseButton.addEventListener('click', function(){
-  closePopup(editPopup);
+// Открытие попапа добавления карточки
+profileAddButton.addEventListener('click', function(){
+  openPopup(addCardPopup);
 });
 
-function closePopup(popup) {
+function openPopup(popup) {
+  popup.classList.add('popup_opened');
+  let profileCloseButton = popup.querySelector('.popup__close-button');
+  profileCloseButton.addEventListener('click', function(){
+    closePopup();
+  });
+};
+
+// Закрытие попапа редактирования
+
+// function closePopup(evt) {
+//   evt.classList.remove('popup_opened');
+// };
+
+function closePopup() {
+  let popup = document.querySelector('.popup_opened');
   popup.classList.remove('popup_opened');
 };
 
@@ -58,7 +70,7 @@ editPopup.addEventListener('submit', formSubmitHandler);
 let elements = document.querySelector('.elements');
 
 elements.onclick = function(event){
-  if (event.target.ariaLabel === 'нравится'){
+  if (event.target.ariaLabel === 'Нравится'){
     event.target.classList.toggle('element__like_active')
   }
 };
@@ -130,3 +142,4 @@ function handleDeleteButtonClick(event) {
   const card = button.closest('.element');
   card.remove();
 }
+
