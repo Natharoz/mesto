@@ -1,8 +1,8 @@
 // Попап
-let editPopup = document.querySelector('.popup_type_edit');
-let addCardPopup = document.querySelector('.popup_type_add-card');
-let profileEditButton = document.querySelector('.profile__edit-button');
-let profileAddButton = document.querySelector('.profile__add-button');
+const editPopup = document.querySelector('.popup_type_edit');
+const addCardPopup = document.querySelector('.popup_type_add-card');
+const profileEditButton = document.querySelector('.profile__edit-button');
+const profileAddButton = document.querySelector('.profile__add-button');
 
 // Информация об авторе
 let author = {
@@ -10,16 +10,16 @@ let author = {
   description: 'Исследователь океана'
 };
 
-let authorName = document.querySelector('.profile__author');
+const authorName = document.querySelector('.profile__author');
 authorName.textContent = author.name;
 
-let authorNameInput = document.querySelector('.popup__field[name="fullname"]');
+const authorNameInput = document.querySelector('.popup__field[name="fullname"]');
 authorNameInput.value = author.name;
 
-let authorDescription = document.querySelector('.profile__description');
+const authorDescription = document.querySelector('.profile__description');
 authorDescription.textContent = author.description;
 
-let authorDescriptionInput = document.querySelector('.popup__field[name="occupation"]');
+const authorDescriptionInput = document.querySelector('.popup__field[name="occupation"]');
 authorDescriptionInput.value = author.description;
 
 // Открытие попапа профиля
@@ -53,8 +53,8 @@ function closePopup() {
   popup.classList.remove('popup_opened');
 };
 
-// Сохранение данных попап
-function formSubmitHandler (evt) {
+// Сохранение данных попап редактирования профиля
+function profileFormSubmitHandler (evt) {
   evt.preventDefault();
   let authorNameValue = authorNameInput.value;
   authorName.textContent = authorNameValue;
@@ -63,7 +63,7 @@ function formSubmitHandler (evt) {
   closePopup(editPopup);
 };
 
-editPopup.addEventListener('submit', formSubmitHandler);
+editPopup.addEventListener('submit', profileFormSubmitHandler);
 // Попап конец
 
 // Лайк
@@ -75,6 +75,7 @@ elements.onclick = function(event){
   }
 };
 
+// Загрузка карточек
 const initialCards = [
   {
     name: 'Архыз',
@@ -132,14 +133,30 @@ const createCard = (card) => {
   cardImage.setAttribute('src', card.link);
   const deleteButton = newCard.querySelector('.element__delete');
   deleteButton.addEventListener('click', handleDeleteButtonClick);
-  elements.append(newCard);
+  elements.prepend(newCard);
 }
 
 initialCards.forEach(createCard);
 
+// Удаление карточек
 function handleDeleteButtonClick(event) {
   const button = event.target
   const card = button.closest('.element');
   card.remove();
 }
 
+// Создание данных карточек через форму
+addCardPopup.addEventListener('submit', cardFormSubmitHandler);
+
+function cardFormSubmitHandler(event) {
+  event.preventDefault();
+  const cardNameInput = document.querySelector('.popup__field[name="cardname"]').value;
+  const linkInput = document.querySelector('.popup__field[name="link"]').value;
+  const card = {
+    name: cardNameInput,
+    alt: `${cardNameInput}`,
+    link: linkInput
+  }
+  createCard(card);
+  closePopup(addCardPopup);
+}
