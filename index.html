@@ -43,29 +43,38 @@
     <footer class="footer page__content">
       <p class="footer__copyright" lang="en">© 2023 Mesto Russia</p>
     </footer>
-  </div>
-  <div class="popup popup_type_edit">
-    <form class="popup__container">
-      <h2 class="popup__name-form">Редактировать профиль</h2>
-      <fieldset class="popup__fieldset">
-        <input class="popup__field" type="text" name="fullname" placeholder="Введите имя" minlength="2" maxlength="40" required>
-        <input class="popup__field" type="text" name="occupation" placeholder="Занятость" minlength="2" maxlength="200" required>
-      </fieldset>
-      <button class="popup__save-button" type="submit" aria-label="сохранить форму">Сохранить</button>
-      <button class="popup__close-button" type="button" aria-label="закрыть форму"></button>
-    </form>
-  </div>
 
-  <div class="popup popup_type_add-card">
-    <form class="popup__container">
-      <h2 class="popup__name-form">Новое место</h2>
-      <fieldset class="popup__fieldset">
-        <input class="popup__field" type="text" name="cardname" placeholder="Название" minlength="2" maxlength="100" required>
-        <input class="popup__field" type="text" name="link" placeholder="Ссылка на картинку" required>
-      </fieldset>
-      <button class="popup__save-button" type="submit" aria-label="создать место">Создать</button>
-      <button class="popup__close-button" type="button" aria-label="закрыть форму"></button>
-    </form>
+    <div class="popup popup_type_edit">
+      <form class="popup__container">
+        <h2 class="popup__name-form">Редактировать профиль</h2>
+        <fieldset class="popup__fieldset">
+          <input class="popup__field" type="text" name="fullname" placeholder="Введите имя" minlength="2" maxlength="40" required>
+          <input class="popup__field" type="text" name="occupation" placeholder="Занятость" minlength="2" maxlength="200" required>
+        </fieldset>
+        <button class="popup__save-button" type="submit" aria-label="сохранить форму">Сохранить</button>
+        <button class="popup__close-button" type="button" aria-label="закрыть форму"></button>
+      </form>
+    </div>
+
+    <div class="popup popup_type_add-card">
+      <form class="popup__container">
+        <h2 class="popup__name-form">Новое место</h2>
+        <fieldset class="popup__fieldset">
+          <input class="popup__field" type="text" name="cardname" placeholder="Название" minlength="2" maxlength="100" required>
+          <input class="popup__field" type="text" name="link" placeholder="Ссылка на картинку" required>
+        </fieldset>
+        <button class="popup__save-button" type="submit" aria-label="создать место">Создать</button>
+        <button class="popup__close-button" type="button" aria-label="закрыть форму"></button>
+      </form>
+    </div>
+
+    <div class="popup popup_type_fullscreen">
+      <div class="popup__fullscreen-container">
+        <img class="popup__image">
+        <h2 class="popup__name-image"></h2>
+        <button class="popup__close-button" type="button" aria-label="закрыть картинку"></button>
+      </div>
+    </div>
   </div>
 </body>
 </html>

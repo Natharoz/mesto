@@ -1,6 +1,7 @@
 // Попап
 const editPopup = document.querySelector('.popup_type_edit');
 const addCardPopup = document.querySelector('.popup_type_add-card');
+const imagePopup = document.querySelector('.popup_type_fullscreen');
 const profileEditButton = document.querySelector('.profile__edit-button');
 const profileAddButton = document.querySelector('.profile__add-button');
 
@@ -43,10 +44,6 @@ function openPopup(popup) {
 };
 
 // Закрытие попапа редактирования
-
-// function closePopup(evt) {
-//   evt.classList.remove('popup_opened');
-// };
 
 function closePopup() {
   let popup = document.querySelector('.popup_opened');
@@ -148,15 +145,39 @@ function handleDeleteButtonClick(event) {
 // Создание данных карточек через форму
 addCardPopup.addEventListener('submit', cardFormSubmitHandler);
 
+// Функция
+const cardFormClear = (value) => {value = 0};
+
 function cardFormSubmitHandler(event) {
   event.preventDefault();
-  const cardNameInput = document.querySelector('.popup__field[name="cardname"]').value;
-  const linkInput = document.querySelector('.popup__field[name="link"]').value;
-  const card = {
+  let cardNameInput = document.querySelector('.popup__field[name="cardname"]').value;
+  let linkInput = document.querySelector('.popup__field[name="link"]').value;
+  let card = {
     name: cardNameInput,
     alt: `${cardNameInput}`,
     link: linkInput
-  }
+  };
   createCard(card);
+  // console.log(cardNameInput);
+  // cardFormClear(cardNameInput);
+  // cardFormClear(linkInput);
+  // linkInput.textContent = author.name
+  // document.querySelector('.popup__field[name="cardname"]').textContent = '333';
+  // document.querySelector('.popup__field[name="link"]').textContent = '333';
+  // console.log(cardNameInput);
+
   closePopup(addCardPopup);
 }
+
+// Открытие попапа картинки
+elements.onclick = function(event){
+  if (event.target.closest('.element__place')){
+    let imageLink = event.target.getAttribute('src');
+    let imageName = event.target.getAttribute('alt');
+    openPopup(imagePopup);
+    const popupImage = document.querySelector('.popup__image');
+    popupImage.setAttribute('src', imageLink);
+    const popupNameImage = document.querySelector('.popup__name-image');
+    popupNameImage.textContent = imageName;
+  }
+};
